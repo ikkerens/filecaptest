@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Filecap Sending Test</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        /* Reset margin/padding to zero for browser consistency */
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            width: 100vh;
+            margin: 20px 20px;
+            border-bottom: 1px solid blue;
+        }
+
+        main {
+            margin-left: 25px;
+        }
+
+        .form-row {
+            display: flex;
+            margin-bottom: 10px;
+            align-items: center;
+        }
+
+        .form-row > label {
+            width: 150px;
+            margin-right: 10px;
+        }
+
+        .form-row > input {
+            width: 200px;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <h1>Filecap Sendfile Test</h1>
+</header>
+<main>
+    <form method="POST" action="/send" enctype="multipart/form-data">
+        <div class="form-row">
+            <label for="email">Recipient*</label>
+            <input id="email" name="email" type="email" required/>
+        </div>
+        <div class="form-row">
+            <label for="subject">Subject</label>
+            <input id="subject" name="subject" type="text"/>
+        </div>
+        <div class="form-row">
+            <label for="comment">Comment</label>
+            <input id="comment" name="comment" type="text"/>
+        </div>
+        <div class="form-row">
+            <label for="password">Password</label>
+            <input id="password" name="password" type="password"/>
+        </div>
+        <div class="form-row">
+            <label for="file">File to send*</label>
+            <input id="file" name="file" type="file" required/>
+        </div>
+        <div class="form-row">
+            <input type="submit" value="Submit" />
+        </div>
+    </form>
+</main>
+</body>
+</html>
